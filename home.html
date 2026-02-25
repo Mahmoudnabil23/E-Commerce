@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssiutCart - Online Store</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom bg-white">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="home.html">
+                <span class="text-primary">Assiut</span><span class="text-dark">Cart</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="goToShop(); return false;">Shop</a></li>
+                </ul>
+                <div id="user-nav-area"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-dark text-white py-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Shop Everything You Need</h1>
+                    <p class="text-secondary fs-5 mb-4">
+                        Find phones, laptops, clothes, beauty products, and more. Good prices and fast delivery.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-primary btn-lg" onclick="goToShop(); return false;">
+                            <i class="bi bi-bag me-2"></i>Shop Now
+                        </a>
+                        <a href="#categories" class="btn btn-outline-light btn-lg">See Categories</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="../images/thumbnail_hero.png" alt="Products" class="img-fluid" style="max-height: 350px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+
+        function goToShop() {
+            if (isLoggedIn()) {
+                window.location.href = "html/shop.html";
+            } else {
+                window.location.href = "html/login.html";
+            }
+        }
+    </script>
+</body>
+
+</html>

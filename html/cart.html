@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | AssiutCart</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../home.html">
+                <span class="text-primary">Assiut</span><span class="text-dark">Cart</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="cart.html" class="text-dark"><i class="bi bi-cart3 fs-5"></i></a>
+                    <div id="user-nav-area"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-dark text-white py-4">
+        <div class="container">
+            <h2 class="fw-bold mb-1"><i class="bi bi-bag-check me-2"></i>My Cart</h2>
+            <p class="text-white-50 mb-0" id="cart-item-count">0 items in your cart</p>
+        </div>
+    </div>
+
+    <!-- Cart Content -->
+    <div class="container py-4">
+
+        <!-- Empty State -->
+        <div id="cart-page-empty" class="text-center py-5 my-5">
+            <i class="bi bi-cart-x display-1 text-muted d-block mb-3"></i>
+            <h4 class="fw-bold">Nothing here yet</h4>
+            <p class="text-muted mb-4">Your cart is waiting — go explore our products!</p>
+            <a href="shop.html" class="btn btn-primary btn-lg">
+                <i class="bi bi-bag me-2"></i>Browse Products
+            </a>
+        </div>
+
+        <!-- Cart Items (cards) -->
+        <div id="cart-page-items" class="row g-3"></div>
+
+        <!-- Order Summary (full-width below items) -->
+        <div id="cart-summary-section" style="display:none;">
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="d-flex flex-wrap gap-4">
+                        <div class="border-start ps-4">
+                            <small class="text-muted d-block">Total</small>
+                            <span class="fw-bold fs-3 text-primary" id="summary-total">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a href="shop.html" class="btn btn-outline-secondary me-2">
+                        <i class="bi bi-arrow-left me-1"></i>Keep Shopping
+                    </a>
+                    <button class="btn btn-primary btn-lg px-4" id="checkout-btn">
+                        Checkout <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light py-4 mt-5 border-top">
+        <div class="container text-center">
+            <p class="text-muted small mb-0">© 2024 AssiutCart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart-page.js"></script>
+</body>
+
+</html>
