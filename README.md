@@ -27,7 +27,7 @@ A simple e-commerce web application built with HTML, CSS, JavaScript, and Bootst
 ## Project Structure
 
 ```
-stitch_create_account/
+AssiutCart/
 ├── home.html
 ├── html/
 │   ├── shop.html
